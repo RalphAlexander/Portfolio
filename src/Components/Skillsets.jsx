@@ -33,7 +33,7 @@ export default function Skillsets() {
 
             <div className="skills-grid">
                 {skillCategories.map((category) => (
-                    <div className="skill-category" key={category.name}>
+                    <div className="skill-category hoverable-div" key={category.name}>
                         <h4>{category.name}</h4>
 
                         <div className="skill-list">

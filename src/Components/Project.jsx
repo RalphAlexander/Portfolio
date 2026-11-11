@@ -23,7 +23,7 @@ export default function Project({
 }) {
     return (
         <div className='project-card-container'>
-            <div className='project-card'>
+            <div className='project-card hoverable-div'>
                 <div className='card-header'>
                     <div className="project-header-top">
                         <h3 className="project-title">{name}</h3>
