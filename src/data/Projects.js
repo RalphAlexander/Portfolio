@@ -43,7 +43,7 @@ const projects = [
     {
         name: "Seasonal Anime Calendar",
         description:
-            "A web application using the Jikan API data that allows users to explore anime by season and maintain a personal list, which is saved locally in the browser.",
+            "A web application using API data that allows users to explore anime by season and maintain a personal list, which is saved locally in the browser.",
         technologies: [Technologies.REACT, Technologies.JAVASCRIPT, Technologies.HTML_CSS, Technologies.REST_API],
         imgSrc: `${process.env.PUBLIC_URL}/Seasonal_Anime_Calendar.png`,
         imgAlt: "Seasonal Anime Calendar Project Preview",
