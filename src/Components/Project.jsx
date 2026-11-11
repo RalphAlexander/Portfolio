@@ -1,6 +1,7 @@
 import TechBadge from "./TechBadge";
 import { SiGithub } from "react-icons/si";
 import { ExternalLink } from "lucide-react";
+import { useState } from "react";
 
 // @param name - string name of the project
 // @param description - string description of the project
@@ -21,13 +22,25 @@ export default function Project({
     link,
     ghLink
 }) {
+    const [imageError, setImageError] = useState(false);
+
+    const showImage = imgSrc && !imageError;
+
     return (
         <div className='project-card-container'>
             <div className='project-card hoverable-div'>
                 <div className='card-header'>
                     <div className="project-header-top">
-                        <img src={imgSrc} alt={imgAlt} className="project-header-img" />
-
+                        {showImage ? (
+                            <img
+                                src={imgSrc}
+                                alt=""
+                                className="project-header-img"
+                                onError={() => setImageError(true)}
+                            />
+                        ) : (
+                            <div className="project-header-background" />
+                        )}
                         <div className="project-header-content">
                             <h3 className="project-title">{name}</h3>
                             <div className="header-links">
@@ -64,15 +77,6 @@ export default function Project({
 
                     <TechBadge technologies={technologies} />
                 </div>
-
-                {/* <div className='project-img-container'>
-                    <img
-                        src={imgSrc}
-                        className='project-img'
-                        alt={imgAlt || name}
-                        loading="lazy"
-                    />
-                </div> */}
 
                 {description && (
                     <p className='project-description'>

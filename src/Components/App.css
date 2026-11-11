@@ -391,11 +391,18 @@ h4 {
 
 	opacity: 0.65;
 	mask-image: linear-gradient(to bottom,
-			black 0%,
-			black 0%,
+			black 20%,
 			transparent 100%);
+}
 
-	z-index: 0;
+.project-header-background {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        var(--card-bg) 10%,
+        var(--bg-section) 100%
+    );
 }
 
 .project-header-content {
