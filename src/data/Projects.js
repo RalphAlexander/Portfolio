@@ -37,7 +37,7 @@ const projects = [
         technologies: [Technologies.REACT, Technologies.HTML_CSS, Technologies.JAVASCRIPT],
         imgSrc: `${process.env.PUBLIC_URL}/TodoList_App_Preview.png`,
         imgAlt: "Todo List Project Preview",
-        link: "https://RalphAlexander.github.io/Todo-App/",
+        link: "https://RalphAlexander.github.io/Todo-App",
         ghLink: "https://github.com/RalphAlexander/Todo-App",
     },
     {
@@ -47,8 +47,15 @@ const projects = [
         technologies: [Technologies.REACT, Technologies.JAVASCRIPT, Technologies.HTML_CSS, Technologies.REST_API],
         imgSrc: `${process.env.PUBLIC_URL}/Seasonal_Anime_Calendar.png`,
         imgAlt: "Seasonal Anime Calendar Project Preview",
-        link: "https://RalphAlexander.github.io/Seasonal-Anime-Calendar/",
+        link: "https://RalphAlexander.github.io/Seasonal-Anime-Calendar",
         ghLink: "https://github.com/RalphAlexander/Seasonal-Anime-Calendar",
+    },
+    {
+        name: "HealthSync API",
+        description:
+            "An API for managing and synchronizing healthcare records, with separate access levels for patients and healthcare employees.",
+        technologies: [Technologies.PYTHON, Technologies.POSTGRES],
+        ghLink: "https://github.com/RalphAlexander/HealthsyncAPI",
     },
     {
         name: "Sorting Visualizer",
@@ -57,7 +64,7 @@ const projects = [
         technologies: [Technologies.REACT, Technologies.HTML_CSS, Technologies.JAVASCRIPT],
         imgSrc: `${process.env.PUBLIC_URL}/Sorting_Algorithm_Preview.png`,
         imgAlt: "Sorting Visualizer Project Preview",
-        link: "https://RalphAlexander.github.io/Sorting-Visualizer/",
+        link: "https://RalphAlexander.github.io/Sorting-Visualizer",
         ghLink: "https://github.com/RalphAlexander/Sorting-Visualizer",
     },
 ];

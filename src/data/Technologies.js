@@ -8,4 +8,6 @@ export const Technologies = {
     JAVASCRIPT: "JavaScript",
     HTML_CSS: "HTML/CSS",
     REST_API: "REST API",
+    PYTHON: "Python",
+    POSTGRES: "PostgreSQL"
 };
