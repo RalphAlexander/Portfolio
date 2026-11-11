@@ -37,7 +37,7 @@ export default function Project({
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label={`${name} GitHub repository`}
-                                    title="GitHub repository"
+                                    title="Visit GitHub repository"
                                 >
                                     <SiGithub size={20} />
                                 </a>
