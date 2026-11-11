@@ -46,7 +46,6 @@ h1 {
 	margin: 2rem 0.4em 0.2em;
 	font-family: 'Poppins', sans-serif;
 	font-size: 64px;
-	color: var(--bg-main);
 }
 
 
@@ -62,9 +61,30 @@ h4 {
 
 .body {
 	min-height: 100vh;
+	background-color: var(--bg-main);
+	background-image:
+		linear-gradient(rgba(77, 171, 247, 0.035) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(77, 171, 247, 0.035) 1px, transparent 1px),
+
+		radial-gradient(ellipse at 20% 20%,
+			rgba(77, 171, 247, 0.10),
+			transparent 50%),
+		radial-gradient(ellipse at 80% 70%,
+			rgba(77, 171, 247, 0.07),
+			transparent 50%);
+
+	background-size:
+		64px 64px,
+		64px 64px,
+		auto,
+		auto;
 }
 
 .about-me-grid {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+
 	background-color: var(--bg-section);
 	padding: 0 10em 0;
 	max-width: 100%;
@@ -77,6 +97,101 @@ h4 {
 	position: relative;
 	padding-bottom: 4rem;
 	box-sizing: border-box;
+}
+
+.about-me-grid::before,
+.about-me-grid::after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	filter: blur(100px);
+	pointer-events: none;
+}
+
+.about-me-grid::before {
+	background: rgba(77, 171, 247, 0.13);
+	top: -200px;
+	left: -100px;
+	animation: gradient-float-1 20s ease-in-out infinite alternate;
+}
+
+.about-me-grid::after {
+	background: rgba(77, 171, 247, 0.10);
+	bottom: -250px;
+	right: -100px;
+	animation: gradient-float-2 25s ease-in-out infinite alternate;
+}
+
+.about-me-grid .img-container {
+	position: relative;
+	z-index: 1;
+}
+
+.about-me-grid {
+	background-image:
+		radial-gradient(circle, rgba(77, 171, 247, 0.5) 1px, transparent 2px),
+		radial-gradient(circle, rgba(77, 171, 247, 0.3) 1px, transparent 2px),
+		radial-gradient(circle, rgba(241, 243, 245, 0.25) 1px, transparent 2px);
+
+	background-size:
+		130px 130px,
+		190px 190px,
+		250px 250px;
+
+	background-position:
+		0 0,
+		50px 70px,
+		100px 30px;
+
+	animation: particle-drift 35s linear infinite;
+}
+
+@keyframes particle-drift {
+	from {
+		background-position:
+			0 0,
+			50px 70px,
+			100px 30px;
+	}
+
+	to {
+		background-position:
+			130px 130px,
+			240px 260px,
+			350px 280px;
+	}
+}
+
+@keyframes gradient-float-1 {
+	from {
+		transform: translate(0, 0);
+	}
+
+	to {
+		transform: translate(180px, 120px);
+	}
+}
+
+@keyframes gradient-float-2 {
+	from {
+		transform: translate(0, 0);
+	}
+
+	to {
+		transform: translate(-180px, -100px);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.about-me-grid,
+	.about-me-grid::before,
+	.about-me-grid::after {
+		animation: none;
+	}
 }
 
 .scroll-down {
@@ -167,7 +282,6 @@ h4 {
 
 .skillset-container {
 	font-family: 'Poppins', sans-serif;
-	background-color: var(--bg-main);
 	color: var(--text-main);
 	padding: 1.5rem 2rem 3rem;
 }
@@ -226,7 +340,7 @@ h4 {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 3rem;
-	margin: 0 2rem 4rem 2rem;
+	margin: 0 4rem 3rem 4rem;
 	align-items: stretch;
 }
 
@@ -385,6 +499,7 @@ h4 {
 	color: var(--text-main);
 	text-align: center;
 	font-family: 'Poppins', sans-serif;
+	border-top: 1px solid rgba(77, 171, 247, 0.25);
 }
 
 .gh-icon {

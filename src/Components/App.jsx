@@ -12,7 +12,6 @@ function App() {
 			<div className='body'>
 				<AboutMe />
 				<ProjectsList />
-				<Divider />
 				<Skillsets />
 			</div>
 			<Footer />
