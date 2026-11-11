@@ -1,5 +1,5 @@
 import { SiGithub } from "react-icons/si";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ChevronDown } from "lucide-react";
 
 // Returns the AboutMe component which renders a section in the page 
 // about me
@@ -47,11 +47,15 @@ export default function AboutMe() {
                     <p>
                         I've worked on a variety of projects including React-based web applications and games built with Godot and Unity.
                         I'm particularly interested in game development, where I enjoy designing game mechanics inspired by my
-                        favorite games like Slay the Spire and Hollow Knight. Participating in game jams has also given me the 
+                        favorite games like Slay the Spire and Hollow Knight. Participating in game jams has also given me the
                         opportunity to develop games under a specific theme and time constraint, resulting in unique
                         fusions of game concepts.
                     </p>
                 </div>
+
+                <a href="#projects" className="scroll-down" aria-label="Scroll down to skills">
+                    <ChevronDown size={80} strokeWidth={2} />
+                </a>
             </div>
         </>
     )

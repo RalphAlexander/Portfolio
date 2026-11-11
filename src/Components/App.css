@@ -32,6 +32,7 @@
 
 * {
 	margin: 0;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -73,6 +74,46 @@ h4 {
 		'img subhead'
 		'img txt';
 	min-height: 100vh;
+	position: relative;
+	padding-bottom: 4rem;
+	box-sizing: border-box;
+}
+
+.scroll-down {
+	position: absolute;
+	bottom: 1.2rem;
+	left: 50%;
+	transform: translateX(-50%);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	color: var(--text-muted);
+	transition: color 0.2s ease;
+	animation: bounce-down 1.8s infinite;
+}
+
+.scroll-down:hover {
+	color: var(--card-light);
+}
+
+@keyframes bounce-down {
+
+	0%,
+	100% {
+		transform: translate(-50%, 0);
+	}
+
+	50% {
+		transform: translate(-50%, 8px);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.scroll-down {
+		animation: none;
+	}
 }
 
 .img-container {
@@ -197,6 +238,9 @@ h4 {
 	font-family: 'Nunito', sans-serif;
 }
 
+.project-header {
+	padding: 4rem 0 3rem;
+}
 
 .project-header-top {
 	display: flex;

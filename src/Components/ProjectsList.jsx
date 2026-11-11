@@ -6,7 +6,7 @@ import projects from "../data/Projects.js"
 export default function ProjectsList() {
     return (
         <>
-            <div className='project-header'>
+            <div id="projects" className='project-header'>
                 <h3 className='header'>
                     Projects
                 </h3>
