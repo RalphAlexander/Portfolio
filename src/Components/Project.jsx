@@ -26,50 +26,53 @@ export default function Project({
             <div className='project-card hoverable-div'>
                 <div className='card-header'>
                     <div className="project-header-top">
-                        <h3 className="project-title">{name}</h3>
+                        <img src={imgSrc} alt={imgAlt} className="project-header-img" />
 
-                        <div className="header-links">
+                        <div className="project-header-content">
+                            <h3 className="project-title">{name}</h3>
+                            <div className="header-links">
 
-                            {ghLink && (
-                                <a
-                                    href={ghLink}
-                                    className="redirect-icon"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label={`${name} GitHub repository`}
-                                    title="Visit GitHub repository"
-                                >
-                                    <SiGithub size={20} />
-                                </a>
-                            )}
+                                {ghLink && (
+                                    <a
+                                        href={ghLink}
+                                        className="redirect-icon"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={`${name} GitHub repository`}
+                                        title="Visit GitHub repository"
+                                    >
+                                        <SiGithub size={20} />
+                                    </a>
+                                )}
 
-                            {link && (
-                                <a
-                                    href={link}
-                                    target="_blank"
-                                    className="redirect-icon"
-                                    rel="noopener noreferrer"
-                                    aria-label={`Visit ${name}`}
-                                    title="Visit project"
-                                >
-                                    <ExternalLink size={20} strokeWidth={2} />
-                                </a>
-                            )}
+                                {link && (
+                                    <a
+                                        href={link}
+                                        target="_blank"
+                                        className="redirect-icon"
+                                        rel="noopener noreferrer"
+                                        aria-label={`Visit ${name}`}
+                                        title="Visit project"
+                                    >
+                                        <ExternalLink size={20} strokeWidth={2} />
+                                    </a>
+                                )}
 
+                            </div>
                         </div>
                     </div>
 
                     <TechBadge technologies={technologies} />
                 </div>
 
-                <div className='project-img-container'>
+                {/* <div className='project-img-container'>
                     <img
                         src={imgSrc}
                         className='project-img'
                         alt={imgAlt || name}
                         loading="lazy"
                     />
-                </div>
+                </div> */}
 
                 {description && (
                     <p className='project-description'>
